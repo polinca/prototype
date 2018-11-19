@@ -13,6 +13,12 @@
 		C6AB0CFB218C9D5300914354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AB0CF9218C9D5300914354 /* Main.storyboard */; };
 		C6AB0CFD218C9D5400914354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AB0CFC218C9D5400914354 /* Assets.xcassets */; };
 		C6AB0D00218C9D5400914354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AB0CFE218C9D5400914354 /* LaunchScreen.storyboard */; };
+		C6D0629921933E6A00B9B47B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0629821933E6A00B9B47B /* Network.swift */; };
+		C6D0629B21933EBC00B9B47B /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0629A21933EBC00B9B47B /* WalletService.swift */; };
+		C6D0629F2193413D00B9B47B /* WalletContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D0629E2193413D00B9B47B /* WalletContracts.swift */; };
+		C6D062A12193422300B9B47B /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D062A02193422300B9B47B /* WalletViewController.swift */; };
+		C6D062A32193428400B9B47B /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D062A22193428400B9B47B /* WalletPresenter.swift */; };
+		C6F540912195D60D0024E27D /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F540902195D60D0024E27D /* Wallet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		C6AB0CFC218C9D5400914354 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6AB0CFF218C9D5400914354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6AB0D01218C9D5400914354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D0629821933E6A00B9B47B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C6D0629A21933EBC00B9B47B /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		C6D0629E2193413D00B9B47B /* WalletContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletContracts.swift; sourceTree = "<group>"; };
+		C6D062A02193422300B9B47B /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		C6D062A22193428400B9B47B /* WalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPresenter.swift; sourceTree = "<group>"; };
+		C6F540902195D60D0024E27D /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,85 @@
 		C6AB0CF2218C9D5300914354 /* b */ = {
 			isa = PBXGroup;
 			children = (
-				C6AB0CF3218C9D5300914354 /* AppDelegate.swift */,
-				C6AB0CF5218C9D5300914354 /* FirstViewController.swift */,
-				C6AB0CF7218C9D5300914354 /* SecondViewController.swift */,
-				C6AB0CF9218C9D5300914354 /* Main.storyboard */,
-				C6AB0CFC218C9D5400914354 /* Assets.xcassets */,
-				C6AB0CFE218C9D5400914354 /* LaunchScreen.storyboard */,
-				C6AB0D01218C9D5400914354 /* Info.plist */,
+				C6F5408F2195D5B00024E27D /* Model */,
+				C6D062942193266300B9B47B /* AplicationLayer */,
+				C6D06291219325F600B9B47B /* PresentationLayer */,
+				C6D062922193262000B9B47B /* BusinesLogicLayer */,
+				C6D062932193264A00B9B47B /* CoreLayer */,
+				C6D06295219326A700B9B47B /* SupportingFiles */,
 			);
 			path = b;
+			sourceTree = "<group>";
+		};
+		C6D06291219325F600B9B47B /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C6D0629C219340CF00B9B47B /* UserStories */,
+				C6AB0CF9218C9D5300914354 /* Main.storyboard */,
+				C6AB0CF5218C9D5300914354 /* FirstViewController.swift */,
+				C6AB0CF7218C9D5300914354 /* SecondViewController.swift */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		C6D062922193262000B9B47B /* BusinesLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C6D0629A21933EBC00B9B47B /* WalletService.swift */,
+			);
+			path = BusinesLogicLayer;
+			sourceTree = "<group>";
+		};
+		C6D062932193264A00B9B47B /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C6D0629821933E6A00B9B47B /* Network.swift */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		C6D062942193266300B9B47B /* AplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB0CF3218C9D5300914354 /* AppDelegate.swift */,
+			);
+			path = AplicationLayer;
+			sourceTree = "<group>";
+		};
+		C6D06295219326A700B9B47B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB0CFE218C9D5400914354 /* LaunchScreen.storyboard */,
+				C6AB0CFC218C9D5400914354 /* Assets.xcassets */,
+				C6AB0D01218C9D5400914354 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C6D0629C219340CF00B9B47B /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				C6D0629D219340E200B9B47B /* AddWallet */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		C6D0629D219340E200B9B47B /* AddWallet */ = {
+			isa = PBXGroup;
+			children = (
+				C6D0629E2193413D00B9B47B /* WalletContracts.swift */,
+				C6D062A02193422300B9B47B /* WalletViewController.swift */,
+				C6D062A22193428400B9B47B /* WalletPresenter.swift */,
+			);
+			path = AddWallet;
+			sourceTree = "<group>";
+		};
+		C6F5408F2195D5B00024E27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6F540902195D60D0024E27D /* Wallet.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6D062A12193422300B9B47B /* WalletViewController.swift in Sources */,
+				C6D0629921933E6A00B9B47B /* Network.swift in Sources */,
 				C6AB0CF8218C9D5300914354 /* SecondViewController.swift in Sources */,
 				C6AB0CF4218C9D5300914354 /* AppDelegate.swift in Sources */,
 				C6AB0CF6218C9D5300914354 /* FirstViewController.swift in Sources */,
+				C6D062A32193428400B9B47B /* WalletPresenter.swift in Sources */,
+				C6F540912195D60D0024E27D /* Wallet.swift in Sources */,
+				C6D0629F2193413D00B9B47B /* WalletContracts.swift in Sources */,
+				C6D0629B21933EBC00B9B47B /* WalletService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = b/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/b/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = b/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/b/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
